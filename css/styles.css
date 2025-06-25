@@ -40,6 +40,12 @@
 }
 
 
+/* en tu hoja de estilos */
+.cyberpunk-font{
+  font-family: 'Orbitron', monospace;
+}
+
+
 body {
 
     text-align: center;
