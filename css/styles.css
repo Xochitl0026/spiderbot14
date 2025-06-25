@@ -1,3 +1,51 @@
+/* --------- Título estilo CIBER-PUNK --------- */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap");
+
+#titulo-cyber{
+  font-family: "Orbitron", monospace;      /* tipografía futurista */
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  position: relative;
+  margin: 0;
+
+  /* degradado neón animado */
+  background: linear-gradient(90deg,#00eaff 0%,#ff00f7 50%,#00eaff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: scan 4s linear infinite;
+}
+
+/* halo neón detrás del texto */
+#titulo-cyber::after{
+  content: attr(data-text);               /* duplica el texto */
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: blur(.12em) drop-shadow(0 0 6px #00eaff) drop-shadow(0 0 12px #ff00f7);
+  opacity: .8;
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+/* “escaneo” del degradado */
+@keyframes scan{
+  to{ background-position: -200% center; }
+}
+
+/* latido del halo */
+@keyframes pulse{
+  from{ filter: blur(.08em) drop-shadow(0 0 4px #00eaff) drop-shadow(0 0 8px #ff00f7); }
+  to  { filter: blur(.14em) drop-shadow(0 0 10px #00eaff) drop-shadow(0 0 20px #ff00f7); }
+}
+
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+
+
 img{
 
     padding: 20px;
