@@ -58,9 +58,13 @@
 
     <div class="container-fluid">
 
-        <audio autoplay loop muted>
-        <source src="./assets/audio/Cyberpunk.mp3" type="audio/mpeg">
+        <audio id="musicaFondo" loop>
+            <source src="./assets/audio/Cyberpunk.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
         </audio>
+
+    <button onclick="document.getElementById('musicaFondo').play()">🎵 Reproducir música</button>
+
 
             <h1 style="background-color:rgb(80, 224, 235);" class="text-center"> Substance 3D painter</h1>
          <br>
