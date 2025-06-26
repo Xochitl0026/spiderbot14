@@ -52,6 +52,34 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
+/* Botón circular, neon y flotante */
+#btn-audio{
+  position: fixed;                /* siempre visible */
+  bottom: 1rem; right: 1rem;      /* esquina inferior-derecha */
+  width: 48px; height: 48px;
+  border: none; border-radius: 50%;
+  font-size: 1.3rem; color: #fff;
+  background: linear-gradient(135deg,#ff00d4 0%,#00ddff 100%);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255,0,212,.7), 0 0 18px rgba(0,221,255,.7);
+  transition: transform .2s ease-in-out;
+}
+
+#btn-audio:hover,
+#btn-audio:focus{
+  transform: scale(1.15) rotate(6deg);
+  outline: none;
+}
+
+/* Animación “latido” cuando suena la música */
+@keyframes pulse{
+  0%{box-shadow:0 0 8px 2px rgba(255,0,212,.6);}
+  50%{box-shadow:0 0 14px 6px rgba(0,221,255,.9);}
+  100%{box-shadow:0 0 8px 2px rgba(255,0,212,.6);}
+}
+#btn-audio.playing{
+  animation:pulse 1.5s infinite;
+}
 
 
 img{
